@@ -22,13 +22,13 @@ set a=%1
 for /f %%n in ('dir /b *.jpg') do (
   if !a! lss 10 (
     ren %%n 00!a!.jpg
-    echo %%n->00!a!.jpg
+    echo %%n -^> 00!a!.jpg
   ) else if !a! lss 100 (
     ren %%n 0!a!.jpg
-    echo %%n->0!a!.jpg
+    echo %%n -^> 0!a!.jpg
   ) else (
     ren %%n !a!.jpg
-    echo %%n->!a!.jpg
+    echo %%n -^> !a!.jpg
   )
   set /A a+=1
  ) 
